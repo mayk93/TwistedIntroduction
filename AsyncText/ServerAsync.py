@@ -14,7 +14,7 @@ def get_files(files_to_get):
 
 def configure_sockets():
     sockets_and_numbers = [(socket.socket(socket.AF_INET, socket.SOCK_STREAM),number) for number in range(3)]
-    for sock,number in sockets_and_numbers
+    for sock,number in sockets_and_numbers:
         sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         sock.bind((HOST, PORT[number]))
         sock.listen(5)
