@@ -4,12 +4,13 @@ import socket
 import datetime
 
 HOST = '104.155.75.83'
-PORT = 50007
+PORT = 50008
 BATCH_SIZE = 1024
 
 def configure_socket():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect((HOST, PORT))
+    sock.setblocking(0)
     return sock
 
 def get_text(sock):

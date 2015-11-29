@@ -49,13 +49,6 @@ def main():
     print("Preparing.")
     file_to_serve = get_file(FILE)
     sock = configure_socket()
-    # It worked like this.
-    '''
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    sock.bind((HOST, PORT))
-    sock.listen(5)
-    '''
     print("Now serving at " + str(sock.getsockname()[0]) + ":" + str(sock.getsockname()[1]))
     serve(sock,file_to_serve,SERVING_SIZE,DELAY)
 
