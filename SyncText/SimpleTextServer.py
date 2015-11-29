@@ -30,8 +30,8 @@ def send_text(sock, file_to_serve, SERVING_SIZE, delay):
         print("Sending "+str(len(batch))+" to client.")
         try:
             # Sending a batch takes time. This time is spent waiting for the batch to be sent.
-            sock.sendall(batch)
-        except Exceptions as e:
+            sock.sendall(batch.encode('utf-8'))
+        except Exception as e:
             print(str(e))
             sock.close()
             file_to_serve.close()
