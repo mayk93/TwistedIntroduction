@@ -44,11 +44,11 @@ def serve(listen_sockets, files_to_serve, serving_sizes, delays):
     while True:
         print("While.")
         for sock,number in listen_sockets:
-            print("For.")
-            # It blocks here because it waits for the first sock (on port 50007) to accept.
+            print("For - "+str(number))
             sockt, addr = sock.accept()
             print("Sending text to: "+str(addr))
             send_text(sockt, files_to_serve[number], serving_sizes[number], delays[number])
+            print("End for.")
 
 def main():
     print("Preparing.")
