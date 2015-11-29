@@ -7,7 +7,6 @@ HOST = '104.155.75.83'
 PORT = 50007
 BATCH_SIZE = 1024
 
-'''
 def configure_socket():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.connect((HOST, PORT))
@@ -38,8 +37,9 @@ def main():
 
 if __name__ == '__main__':
     main()
-'''
 
+# Worked like this
+'''
 start = datetime.datetime.now()
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((HOST, PORT))
@@ -58,3 +58,4 @@ print("Entire Text:")
 print("\n--- * ---\n")
 print(text)
 print("\n--- * ---\n")
+'''
