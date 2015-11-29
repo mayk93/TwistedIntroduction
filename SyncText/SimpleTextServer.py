@@ -3,7 +3,7 @@
 import socket
 import time
 
-HOST = 'localhost'
+HOST = ''
 PORT = 50007
 FILE = "text.txt"
 SERVING_SIZE = 50
