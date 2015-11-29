@@ -46,6 +46,7 @@ def serve(listen_sockets, files_to_serve, serving_sizes, delays):
             sockt, addr = sock.accept()
             print("Sending text to: "+str(addr))
             send_text(sockt, files_to_serve[number], serving_sizes[number], delays[number])
+            time.sleep(1)
 
 def main():
     print("Preparing.")
