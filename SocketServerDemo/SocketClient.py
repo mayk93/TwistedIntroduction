@@ -2,7 +2,7 @@
 import socket
 
 print(0)
-HOST = '130.211.73.8'    # The remote host
+HOST = '104.155.75.83'    # The remote host
 print(1)
 PORT = 50007              # The same port as used by the server
 print(2)
