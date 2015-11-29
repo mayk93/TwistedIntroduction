@@ -20,6 +20,7 @@ def configure_socket():
     return sock
 
 def send_text(sock, file_to_serve, SERVING_SIZE, delay):
+    print("Sending.")
     while True:
         batch = file_to_serve.read(SERVING_SIZE)
         if not batch:
@@ -38,6 +39,7 @@ def send_text(sock, file_to_serve, SERVING_SIZE, delay):
         time.sleep(delay)
 
 def serve(listen_socket, file_to_serve, SERVING_SIZE, delay):
+    print("Serving.")
     while True:
         sock, addr = listen_socket.accept()
         print("Sending text to: "+str(addr))

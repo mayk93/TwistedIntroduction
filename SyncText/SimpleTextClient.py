@@ -10,7 +10,7 @@ BATCH_SIZE = 1024
 
 def configure_socket():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect((HOST,PORT))
+    sock.connect((HOST, PORT))
     return sock
 
 def get_text(sock):
