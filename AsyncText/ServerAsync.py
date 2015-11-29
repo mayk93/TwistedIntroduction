@@ -42,7 +42,9 @@ def send_text(sock, file_to_serve, SERVING_SIZE, delay):
 def serve(listen_sockets, files_to_serve, serving_sizes, delays):
     print("Serving.")
     while True:
+        print("While.")
         for sock,number in listen_sockets:
+            print("For.")
             sockt, addr = sock.accept()
             print("Sending text to: "+str(addr))
             send_text(sockt, files_to_serve[number], serving_sizes[number], delays[number])

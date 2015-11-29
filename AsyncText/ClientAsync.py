@@ -25,7 +25,7 @@ def get_text(sock):
             print("Received at "+str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))+":\n"+str(data.decode('utf-8')))
             text += data.decode('utf-8')
         except Exception as e:
-            print(str(exception))
+            pass
     return text
 
 def main():
