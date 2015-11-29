@@ -20,8 +20,8 @@ def get_text(sock):
         if not data:
             sock.close()
             break
-        print("Received at "+str(datetime.datetime.now.strftime("%Y-%m-%d %H:%M"))+": "+str(data))
-        text += data
+        print("Received at "+str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))+":\n"+str(data.decode('utf-8')))
+        text += data.decode('utf-8')
     return text
 
 def main():
